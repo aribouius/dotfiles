@@ -2,7 +2,7 @@
 # https://www.tweaking4all.com/software/macosx-software/customize-zsh-prompt/
 # https://www.tweaking4all.com/software/macosx-software/xterm-color-cheat-sheet/
 
-# export PATH="$PATH:`pwd`/Code/flutter/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
@@ -54,3 +54,4 @@ run_with_bundler() {
 for cmd in irb rake pry spec rspec puma rails rackup guard; do
   alias $cmd="run_with_bundler $cmd"
 done
+
