@@ -55,3 +55,13 @@ for cmd in irb rake pry spec rspec puma rails rackup guard; do
   alias $cmd="run_with_bundler $cmd"
 done
 
+# opencode
+export PATH=/Users/aribouius/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/aribouius/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
